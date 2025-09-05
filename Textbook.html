@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Textbook.com</title>
+  <link rel="stylesheet" href="SignUpPage.css" />
+  <script src="SignUpPage.js" defer></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="book.png" alt="Books" class="main-img" style="max-width: 48px; vertical-align: middle;">
+        <span class="brand">Textbook.com</span>
+      </div>
+
+      <ul class="nav-center">
+        <li><a href="Textbook.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="dropdown">
+        <button class="dropbtn">Profile ⮟</button>
+        <div class="dropdown-content" id="profileDropdown">
+          <a href="Profile.html" onclick="openProfile(); return false;">Your Profile</a>
+          <a href="SignInPage.html" id="logoutLink">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <aside class="sidebar">
+      <div class="booktypes">
+        <details><summary class="typeofbook">Fiction</summary>
+          <ul>
+            <li>Novels (literary, historical, romance, mystery, thriller, fantasy)</li>
+            <li>Short stories</li>
+            <li>Drama / Plays</li>
+          </ul>
+        </details>
+
+        <details><summary class="typeofbook">Non-Fiction</summary>
+          <ul>
+            <li>Biographies & Autobiographies</li>
+            <li>Self-help</li>
+            <li>Travelogues</li>
+            <li>Essays & Articles</li>
+            <li>Journals & Memoirs</li>
+            <li>Poetry</li>
+          </ul>
+        </details>
+      </div>
+    </aside>
+
+    <main class="content">
+        <h1 class="welcomemessage">Welcome to Textbook.com</h1>
+        <p>Your trusted destination for modern learning resources.</p>
+    </main>
+
+  <footer>
+    <h4 class="footercontent">Contact Us</h4>
+    <p class="footercontent">© 2025 Textbook. All rights reserved.</p>
+  </footer>
+</body>
+</html>

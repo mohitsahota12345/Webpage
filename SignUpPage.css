@@ -1,0 +1,282 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY & LAYOUT */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f9fb;
+  color: #222;
+}
+
+/* HEADER / NAVBAR */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #111827;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.logo img {
+  border-radius: 6px;
+}
+
+.brand {
+  margin-left: 6px;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.nav-center {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-center li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-center li a:hover {
+  color: #93c5fd;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: #93c5fd;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background: #f3f4f6;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+  display: flex;
+  flex: 1;
+  margin-top: 50px; /* height of fixed navbar */
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: absolute;
+  top: 50px; /* below navbar */
+  left: 0;
+  bottom: 0;
+  width: 230px;
+  padding: 20px;
+  background: #f3f4f6;
+  border-radius: 0 12px 12px 0;
+  overflow-y: auto;
+  z-index: 50;
+  margin-bottom: 20px;
+}
+
+.booktypes {
+  padding: 12px;
+}
+
+.typeofbook {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.booktypes ul {
+  margin-top: 6px;
+  margin-left: 16px;
+  list-style: disc;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.booktypes li {
+  margin-bottom: 4px;
+}
+
+/* CONTENT AREA */
+.content {
+  margin-left: 250px; /* space for sidebar */
+  padding: 24px;
+  flex: 1;
+  margin-top: 50px;
+}
+
+/* HEADINGS */
+.content h1 {
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.content p {
+  margin-bottom: 18px;
+  color: #6b7280;
+}
+
+/* FOOTER */
+footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 14px;
+  font-size: 0.9rem;
+  width: 100%;
+  flex-shrink: 0;
+  margin-top: 774px; /* prevent shrinking */
+}
+
+/* PROFILE CARD */
+.profile-card {
+  background: #fff;
+  color: #111;
+  padding: 22px;
+  border-radius: 12px;
+  margin-top: 18px;
+  max-width: 720px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.profile-card h2 {
+  text-align: center;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 16px;
+}
+
+.upload-box {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: #000;
+  cursor: pointer;
+  background: #fff;
+}
+
+#profileImagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#profileImageInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#deleteProfileImageBtn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .content {
+    margin-left: 0;
+    padding: 12px;
+  }
+  .nav-center {
+    gap: 20px;
+  }
+}
