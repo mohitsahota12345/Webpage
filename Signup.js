@@ -191,7 +191,7 @@ if (profileForm) {
       e.preventDefault();
       const userId = getUserIdFromURL();
       if(userId) window.location.href = `Textbook.html?user=${userId}`;
-      else window.location.href = "login.html";
+      else window.location.href = "Login.html";
     });
   }
 
@@ -215,13 +215,13 @@ if(textbookProfileLink){
     e.preventDefault();
     const userId = getUserIdFromURL();
     if(userId) window.location.href = `Profile.html?user=${userId}`;
-    else window.location.href = "login.html";
+    else location.href = "Login.html";
   });
 }
 if(textbookLogoutLink){
   textbookLogoutLink.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.href = "login.html";
+    location.href = "Login.html";
   });
 }
 
