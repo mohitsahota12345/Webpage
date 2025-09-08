@@ -1,0 +1,247 @@
+/* === RESET === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === BODY & LAYOUT === */
+html, body {
+  height: 100%;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  user-select: none;
+  font-size: 16px;
+}
+
+/* === NAVBAR === */
+.signin-navbar {
+  width: 100%;
+  background-color: black;
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 6px 12px rgba(30, 64, 175, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  user-select: none;
+}
+
+/* === LOGO TEXT === */
+.signin-logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  user-select: none;
+}
+
+/* === MAIN CONTAINER === */
+.signin-auth-center {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  background: #f8fafc;
+}
+
+/* === AUTH BOX === */
+.signin-auth-box {
+  background: #ffffff;
+  padding: 48px 48px 52px;
+  border-radius: 1rem;
+  box-shadow:
+    0 12px 18px rgba(33, 97, 243, 0.12),
+    0 24px 48px rgba(33, 97, 243, 0.15);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+/* === HEADINGS === */
+.signin-auth-box h1 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  letter-spacing: 0.12em;
+}
+
+/* === FORM LABELS === */
+.signin-auth-box label {
+  display: block;
+  text-align: left;
+  font-weight: 700;
+  color: #334155;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+/* === FORM INPUTS === */
+.signin-auth-box input[type="email"],
+.signin-auth-box input[type="password"] {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #cbd5e1;
+  background-color: #f9fafb;
+  font-size: 1rem;
+  color: #334155;
+  box-shadow: inset 0 4px 8px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.signin-auth-box input[type="email"]:focus,
+.signin-auth-box input[type="password"]:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.35);
+}
+
+/* === PASSWORD TOGGLE === */
+.signin-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.signin-input-wrapper input {
+  padding-right: 48px;
+}
+.signin-input-wrapper span {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #64748b;
+  font-size: 1.3rem;
+  user-select: none;
+}
+.signin-input-wrapper span:hover {
+  color: #2563eb;
+  filter: drop-shadow(0 0 1px rgba(37,99,235,0.75));
+}
+
+/* === BUTTON === */
+.signin-auth-box button[type="submit"] {
+  margin-top: 2rem;
+  padding: 16px 10px;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: black;
+  background:rgb(145, 143, 140);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 14px 24px rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.1em;
+  user-select: none;
+  text-transform: uppercase;
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+.signin-auth-box button[type="submit"]:hover {
+  background: black;
+  color: white;
+}
+
+/* === LINKS === */
+.signin-auth-box p {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #475569;
+}
+.signin-auth-box p a {
+  font-weight: 700;
+}
+
+/* ===== FOOTER ===== */
+.textbook-footer {
+  background-color: black;
+  color: #f8fafc;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -6px 12px rgba(30, 64, 175, 0.4);
+  user-select: none;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-nav a:hover {
+  color: #93c5fd; /* Light Blue */
+  text-decoration: none;
+}
+
+/* RESPONSIVE FOOTER */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-nav {
+    justify-content: center;
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .signin-auth-box {
+    padding: 32px 24px;
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.20);
+  }
+  .signin-navbar {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+}

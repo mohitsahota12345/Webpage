@@ -1,69 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Textbook.com</title>
-  <link rel="stylesheet" href="SignUpPage.css" />
-  <script src="SignUpPage.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Textbook Library</title>
+  <link rel="stylesheet" href="Textbook.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="book.png" alt="Books" class="main-img" style="max-width: 48px; vertical-align: middle;">
-        <span class="brand">Textbook.com</span>
-      </div>
+  <nav class="textbook-navbar">
+    <div class="textbook-logo">MyApp Textbooks</div>
+    <div>
+      <a href="Profile.html" id="textbookProfileLink">Profile</a>
+      <a href="Login.html" id="textbookLogoutLink">Logout</a>
+    </div>
+  </nav>
 
-      <ul class="nav-center">
-        <li><a href="Textbook.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-
-      <div class="dropdown">
-        <button class="dropbtn">Profile ⮟</button>
-        <div class="dropdown-content" id="profileDropdown">
-          <a href="Profile.html" onclick="openProfile(); return false;">Your Profile</a>
-          <a href="SignInPage.html" id="logoutLink">Logout</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <div class="content-wrapper">
-    <aside class="sidebar">
-      <div class="booktypes">
-        <details><summary class="typeofbook">Fiction</summary>
-          <ul>
-            <li>Novels (literary, historical, romance, mystery, thriller, fantasy)</li>
-            <li>Short stories</li>
-            <li>Drama / Plays</li>
-          </ul>
-        </details>
-
-        <details><summary class="typeofbook">Non-Fiction</summary>
-          <ul>
-            <li>Biographies & Autobiographies</li>
-            <li>Self-help</li>
-            <li>Travelogues</li>
-            <li>Essays & Articles</li>
-            <li>Journals & Memoirs</li>
-            <li>Poetry</li>
-          </ul>
-        </details>
+  <div class="textbook-main-container">
+    <aside class="textbook-sidebar">
+       <div class="textbook-booktypes">
+        <div class="textbook-typeofbook">Books</div>
+        <ul>
+          <li>Math</li>
+          <li>Science</li>
+          <li>English</li>
+        </ul>
       </div>
     </aside>
-
-    <main class="content">
-        <h1 class="welcomemessage">Welcome to Textbook.com</h1>
-        <p>Your trusted destination for modern learning resources.</p>
+    <main class="textbook-content-wrapper">
+       <h1>Welcome to the Textbook Library</h1>
+        <p>Choose a category from the sidebar to get started.</p>
     </main>
+  </div>
 
-  <footer>
-    <h4 class="footercontent">Contact Us</h4>
-    <p class="footercontent">© 2025 Textbook. All rights reserved.</p>
+  <footer class="textbook-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Textbook.com. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
   </footer>
+
+  <script src="Signup.js"></script>
 </body>
 </html>

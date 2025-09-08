@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="SignUp.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="signup-navbar">
+    <div class="signup-logo">Textbook Signup</div>
+  </nav>
+  <div class="signup-auth-center">
+    <div class="signup-auth-box">
+      <h1>Sign Up</h1>
+      <form id="signupForm">
+        <label for="signup_name">Name</label>
+        <input type="text" id="signup_name" required />
+
+        <label for="signup_email">Email</label>
+        <input type="email" id="signup_email" required />
+
+        <label for="signup_password">Password</label>
+        <div class="signup-input-wrapper">
+          <input type="password" id="signup_password" required />
+          <span onclick="togglePassword('signup_password', this)">
+            <i class="fa fa-eye"></i>
+          </span>
+        </div>
+        <label for="confirm_password">Confirm Password</label>
+        <div class="signup-input-wrapper">
+          <input type="password" id="confirm_password" required />
+          <span onclick="togglePassword('confirm_password', this)">
+            <i class="fa fa-eye"></i>
+          </span>
+        </div>
+        <label for="signup_phone">Phone</label>
+        <input type="tel" id="signup_phone" required />
+
+        <label>Gender</label>
+        <div style="text-align: left; margin-bottom: 10px;">
+          <label><input type="radio" name="gender" value="male" required /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+
+        <div class="terms-container">
+          <input type="checkbox" id="termsCheckbox" />
+          <label for="termsCheckbox">
+            I agree to the <a href="#" target="_blank">Terms and Conditions</a>
+          </label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Sign In</a></p>
+    </div>
+  </div>
+
+  <footer class="textbook-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Textbook.com. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="Signup.js"></script>
+</body>
+</html>

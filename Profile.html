@@ -1,101 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Textbook.com</title>
-  <link rel="stylesheet" href="SignUpPage.css" />
-  <script src="SignUpPage.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile</title>
+  <link rel="stylesheet" href="Profile.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="book.png" alt="Books" class="main-img" style="max-width: 48px; vertical-align: middle;">
-        <span class="brand">Textbook.com</span>
+  <nav class="profile-navbar">
+    <div class="profile-logo">MyApp Profile</div>
+    <div><a href="#" id="profileBackToTextbook">Back to Books</a></div>
+  </nav>
+  <div class="profile-main-center">
+    <div class="profile-card-box">
+      <h2>Your Profile</h2>
+      <div class="profile-image-wrapper-box">
+        <div id="profileImagePreview">+</div>
+        <input type="file" accept="image/*" id="profileImageInput">
+        <button type="button" id="deleteProfileImageBtn">Delete</button>
       </div>
+      <form id="profileForm">
+        <label for="profile_name">Name</label>
+        <input type="text" id="profile_name" required />
 
-      <ul class="nav-center">
-        <li><a href="Textbook.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+        <label for="profile_email">Email</label>
+        <input type="email" id="profile_email" required />
 
-      <div class="dropdown">
-        <button class="dropbtn">Profile ⮟</button>
-        <div class="dropdown-content" id="profileDropdown">
-          <a href="#" onclick="openProfile(); return false;">Your Profile</a>
-          <a href="SignInPage.html" id="logoutLink">Logout</a>
-        </div>
-      </div>
-    </nav>
-  </header>
+        <label for="profile_phone">Phone</label>
+        <input type="tel" id="profile_phone" required />
 
-  <div class="content-wrapper">
-    <aside class="sidebar">
-      <div class="booktypes">
-        <details><summary class="typeofbook">Fiction</summary>
-          <ul>
-            <li>Novels (literary, historical, romance, mystery, thriller, fantasy)</li>
-            <li>Short stories</li>
-            <li>Drama / Plays</li>
-          </ul>
-        </details>
-
-        <details><summary class="typeofbook">Non-Fiction</summary>
-          <ul>
-            <li>Biographies & Autobiographies</li>
-            <li>Self-help</li>
-            <li>Travelogues</li>
-            <li>Essays & Articles</li>
-            <li>Journals & Memoirs</li>
-            <li>Poetry</li>
-          </ul>
-        </details>
-      </div>
-    </aside>
-
-    <main class="content">
-      <div class="welcomemessage">
-        <h1>Welcome to Textbook.com</h1>
-        <p>Your trusted destination for modern learning resources.</p>
-      </div>
-
-      <!-- PROFILE SECTION (hidden until opened) -->
-      <section id="profileSection" class="profile-card" style="display:none;">
-        <h2>Your Profile</h2>
-
-        <div class="profile-image-wrapper">
-          <div class="upload-box" id="profileImagePreview" title="Click to upload">+</div>
-          <!-- invisible file input overlay (JS handles preview) -->
-          <input type="file" id="profileImageInput" accept="image/*" onchange="previewProfileImage(event)" />
-          <button type="button" id="deleteProfileImageBtn" onclick="deleteProfileImage()">×</button>
-        </div>
-
-        <form id="profileForm">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" id="profile_name" required />
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" id="profile_email" required />
-          </div>
-          <div class="form-group">
-            <label>Phone</label>
-            <input type="text" id="profile_phone" maxlength="10" pattern="\d{10}" required />
-          </div>
-
-          <button type="submit" class="save-btn">Save Changes</button>
-        </form>
-      </section>
-    </main>
+        <button type="submit" class="profile-save-btn">Save</button>
+      </form>
+    </div>
   </div>
-
-  <footer>
-    <h4 class="footercontent">Contact Us</h4>
-    <p class="footercontent">© 2025 Textbook. All rights reserved.</p>
+  <footer class="textbook-footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Textbook.com. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
   </footer>
+  <script src="Signup.js"></script>
 </body>
 </html>

@@ -1,0 +1,254 @@
+/* === RESET === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === BODY & LAYOUT === */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #1e293b;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* === NAVBAR === */
+.textbook-navbar {
+  width: 100%;
+  background-color: black;
+  color: #f8fafc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  box-shadow: 0 6px 12px rgba(30, 64, 175, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  user-select: none;
+}
+.textbook-logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  user-select: none;
+}
+
+/* Navbar links */
+.textbook-navbar a {
+  color: #f8fafc;
+  font-weight: 600;
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.textbook-navbar a:hover {
+  color: rgb(241, 179, 7);
+  text-decoration: none;
+}
+
+/* === MAIN CONTAINER === */
+.textbook-main-container {
+  flex: 1 0 auto;
+  display: flex;
+  background: #ffffff;
+  margin: 1.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow:
+    0 16px 32px rgba(33, 97, 243, 0.1),
+    0 24px 48px rgba(33, 97, 243, 0.15);
+  overflow: hidden;
+  min-height: 70vh;
+}
+
+/* === SIDEBAR === */
+.textbook-sidebar {
+  width: 260px;
+  background: #f1f5f9; /* Light gray */
+  padding: 24px 20px;
+  border-right: 2px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.textbook-booktypes {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.textbook-typeofbook {
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #2563eb; /* Blue-600 */
+  cursor: default;
+}
+
+.textbook-booktypes ul {
+  list-style: none;
+  padding-left: 1rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.textbook-booktypes li {
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  padding-left: 12px;
+  border-left: 3px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.textbook-booktypes li:hover {
+  color: #1e40af;
+  border-left-color: #2563eb;
+}
+
+/* === CONTENT AREA === */
+.textbook-content-wrapper {
+  flex: 1;
+  padding: 48px 48px 48px 64px;
+  background: #fff;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.textbook-content h1 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.12em;
+}
+
+.textbook-content p {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+/* === CUSTOM SCROLLBAR FOR CONTENT === */
+.textbook-content-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.textbook-content-wrapper::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+.textbook-content-wrapper::-webkit-scrollbar-thumb {
+  background-color: #2563eb;
+  border-radius: 4px;
+}
+
+/* === FOOTER === */
+.textbook-footer {
+  flex-shrink: 0;
+  background-color: black;
+  color: #f8fafc;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -6px 12px rgba(30, 64, 175, 0.4);
+  user-select: none;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-nav a {
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-nav a:hover {
+  color: #93c5fd; /* Light Blue */
+  text-decoration: none;
+}
+
+/* === RESPONSIVE LAYOUT === */
+@media (max-width: 900px) {
+  .textbook-main-container {
+    flex-direction: column;
+    margin: 1rem 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow:
+      0 10px 25px rgba(33, 97, 243, 0.1);
+  }
+  .textbook-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 18px 16px;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+  .textbook-booktypes ul {
+    display: flex;
+    gap: 1rem;
+    padding-left: 0;
+  }
+  .textbook-booktypes li {
+    margin-bottom: 0;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+  .textbook-booktypes li:hover {
+    border-bottom-color: #2563eb;
+  }
+  .textbook-content-wrapper {
+    padding: 32px 24px;
+    margin-top: 16px;
+  }
+  .textbook-content h1 {
+    font-size: 2rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-nav {
+    justify-content: center;
+  }
+}
